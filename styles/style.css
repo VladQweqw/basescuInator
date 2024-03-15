@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poller+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+}
+
+button, input, textarea {
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: darkcyan;
+}
+
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100dvh;
+  background-image: url("../assets/background.png");
+  background-size: cover;
+  background-repeat: none;
+  background-attachment: fixed;
+  font-family: "Poppins";
+}
+body .inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+body .inputfile + label {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: white;
+  background-color: rgb(39, 134, 114);
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .inputfile:focus + label,
+body .inputfile + label:hover {
+  background-color: rgb(28, 153, 84);
+}
+body .inputfile + label {
+  cursor: pointer; /* "hand" cursor */
+}
+
+.title {
+  font-family: "Poller One";
+  text-shadow: 0 4px 5px red;
+}
+
+.loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.651);
+  z-index: 99;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  transform: 200ms ease;
+  opacity: 0;
+  pointer-events: none;
+}
+.loading .blur-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  z-index: -1;
+}
+
+.loading-active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.result-wrapper .status-bar-wrapper {
+  padding: 0.25rem;
+}
+.result-wrapper .status-bar-wrapper .images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.result-wrapper .status-bar-wrapper .images .basescu-img {
+  width: 75px;
+  height: 75px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.result-wrapper .status-bar {
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to right, red, green);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+.result-wrapper .status-bar p {
+  color: white;
+  font-size: 0.75rem;
+}
+.result-wrapper .status-bar div {
+  max-width: 75px;
+}
+
+.concluzie {
+  font-weight: bold;
+}
+
+#status-message {
+  color: blue;
+}
+
+.ingredients-wrapper {
+  text-align: left;
+  width: 100%;
+  overflow-y: auto;
+  height: 100%;
+  padding: 0.25rem;
+  background-color: rgb(29, 27, 27);
+}
+.ingredients-wrapper #ingredients-length {
+  color: rgb(235, 41, 41);
+  text-align: center;
+  text-decoration: underline;
+}
+.ingredients-wrapper .ingredients {
+  display: grid;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+.ingredients-wrapper .ingredients .ingredient {
+  width: 100%;
+  border-radius: 4px;
+}
+.ingredients-wrapper .ingredients .ingredient h3 {
+  color: rgb(235, 31, 31);
+}
+.ingredients-wrapper .ingredients .ingredient p {
+  color: white;
+  font-size: 0.75rem;
+}/*# sourceMappingURL=style.css.map */
