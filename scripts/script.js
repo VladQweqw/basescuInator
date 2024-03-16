@@ -43,7 +43,7 @@ input_file_el.addEventListener('change', async (e) => {
     let textArr = res.data.text.replaceAll('\n', ' ').split(' ')
     console.log(textArr)
 
-    sessionStorage.setItem('data', JSON.stringify(textArr))
+    localStorage.setItem('data', JSON.stringify(textArr))
 
     window.location.pathname = 'pages/result.html'
     setLoading(false)

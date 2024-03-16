@@ -145,7 +145,7 @@ body {
         justify-content: space-between;
         align-items: center;
         padding: .5rem;
-
+        position: relative;
         
         p {
             color: white;
@@ -154,6 +154,18 @@ body {
 
         div {
             max-width: 75px;
+        }
+
+        .indicator {
+            position: absolute;
+            top: 100%;
+            width: 22px;
+            color: red;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
         }
     }
 

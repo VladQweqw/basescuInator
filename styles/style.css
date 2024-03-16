@@ -124,6 +124,7 @@ body .inputfile + label {
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
+  position: relative;
 }
 .result-wrapper .status-bar p {
   color: white;
@@ -131,6 +132,17 @@ body .inputfile + label {
 }
 .result-wrapper .status-bar div {
   max-width: 75px;
+}
+.result-wrapper .status-bar .indicator {
+  position: absolute;
+  top: 100%;
+  width: 22px;
+  color: red;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
 }
 
 .concluzie {
